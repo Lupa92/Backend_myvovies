@@ -16,9 +16,9 @@ router.get('/movies', (req, res)=>{
     .then ((data)=>{
         const movies = data.results.map(elem=>({
             title : elem.title,
-            poster: elem.poster_path,
-            voteAverage:elem.vote_average,
-            voteCount: elem.vote_count,
+            poster_path: elem.poster_path,
+            vote_average:elem.vote_average,
+            vote_count: elem.vote_count,
             overview: elem.overview,
         }));
         res.json({movies})
